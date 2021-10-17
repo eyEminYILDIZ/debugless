@@ -11,9 +11,9 @@ namespace Debugless.Core
 		public static Debugl CallInfo(this Debugl instance, [CallerMemberName] string caller = "", [CallerFilePath] string file = "", [CallerLineNumber] int lineNumber = 0)
 		{
 			var foregroundColor = Console.ForegroundColor;
-			Console.ForegroundColor = ConsoleColor.Blue;
+			Console.ForegroundColor = ConsoleColor.Magenta;
 
-			System.Console.WriteLine($"{ConstantTexts.LogPrefix} [{DateTime.Now.ToShortDateString()}-{DateTime.Now.ToShortTimeString()}] [Call Info]: File='{file}' | Method='{caller}' | Line Number='{lineNumber}'");
+			System.Console.WriteLine($"Call Info: File='{file}' | Method='{caller}' | Line Number='{lineNumber}'");
 
 			Console.ForegroundColor = foregroundColor;
 			return instance;

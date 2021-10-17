@@ -19,7 +19,7 @@ namespace Debugless.Example
 
 			var debugless = new Debugl();
 			debugless.Information("Execution Started...");
-			debugless.DumpObject(student);
+			debugless.DumpObject(student).CallInfo();
 			debugless.Information("Execution Finished").CallInfo();
 		}
 	}

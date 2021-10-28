@@ -15,12 +15,17 @@ namespace Debugless.Example
 				LastName = "Doe",
 				Age = 29,
 				Gender = Genders.Male,
+				Parent = new Parent()
+				{
+					NameSurname = "Marry Chann",
+					TelephoneNumber = "+1234567890"
+				}
 			};
 
 			var debugless = new Debugl();
-			debugless.Information("Execution Started...");
+			// debugless.Information("Execution Started...");
 			debugless.DumpObject(student).CallInfo();
-			debugless.Information("Execution Finished").CallInfo();
+			// debugless.Information("Execution Finished").CallInfo();
 		}
 	}
 }

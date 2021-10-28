@@ -10,6 +10,14 @@ namespace Debugless.Example.Models
 		public string LastName { get; set; }
 		public int Age { get; set; }
 		public Genders Gender { get; set; }
+
+		public Parent Parent { get; set; }
+	}
+
+	public class Parent
+	{
+		public string NameSurname { get; set; }
+		public string TelephoneNumber { get; set; }
 	}
 
 	public enum Genders

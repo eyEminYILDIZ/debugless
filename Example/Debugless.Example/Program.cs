@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Debugless.Core;
 using Debugless.Example.Models;
 
@@ -13,7 +14,7 @@ namespace Debugless.Example
 				Id = 0,
 				FirstName = "John",
 				LastName = "Doe",
-				Age = 29,
+				BirthDate = DateTime.SpecifyKind(DateTime.Parse("1994.01.01 10:00:00"), DateTimeKind.Local),
 				Gender = Genders.Male,
 				Parent = new Parent()
 				{
@@ -23,9 +24,9 @@ namespace Debugless.Example
 			};
 
 			var debugless = new Debugl();
-			// debugless.Information("Execution Started...");
+			debugless.Information("Execution Started...");
 			debugless.DumpObject(student).CallInfo();
-			// debugless.Information("Execution Finished").CallInfo();
+			debugless.Information("Execution Finished").CallInfo();
 		}
 	}
 }

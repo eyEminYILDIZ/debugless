@@ -48,6 +48,12 @@ namespace Debugless.Core
 					var message = $"{tabAsString}{propertyInfo.Name}: {value}";
 					System.Console.WriteLine(message);
 				}
+				else if (propertyInfo.PropertyType == typeof(DateTime))
+				{
+					var value = ((DateTime)propertyInfo.GetValue(objectForDump)).ToLocalTime();
+					var message = $"{tabAsString}{propertyInfo.Name}: \"{value}\"";
+					System.Console.WriteLine(message);
+				}
 				else if (propertyInfo.PropertyType.IsEnum)
 				{
 					var message = $"{tabAsString}{propertyInfo.Name}: {propertyInfo.GetValue(objectForDump)}";

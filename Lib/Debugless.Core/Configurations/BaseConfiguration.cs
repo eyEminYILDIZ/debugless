@@ -1,4 +1,3 @@
-
 using System;
 using Debugless.Core.Enums;
 

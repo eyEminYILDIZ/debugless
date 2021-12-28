@@ -1,5 +1,4 @@
 ﻿using System;
-using Debugless.Core;
 
 namespace Debugless.Example.Models
 {

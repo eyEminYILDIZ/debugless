@@ -6,6 +6,6 @@ namespace Debugless.Core.Configurations
 	public class BaseConfiguration
 	{
 		public static LogLevels Level { get; set; } = LogLevels.Information;
-		public ConsoleColor DefaultLevel { get; set; } = ConsoleColor.Blue;
+		public ConsoleColor DefaultColor { get; set; } = ConsoleColor.Blue;
 	}
 }

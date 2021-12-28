@@ -13,7 +13,9 @@ namespace Debugless.Core
 			var foregroundColor = Console.ForegroundColor;
 			Console.ForegroundColor = ConsoleColor.Magenta;
 
-			System.Console.WriteLine($"Call Info: File='{file}' | Method='{caller}' | Line Number='{lineNumber}'");
+			var relativeFilePath = file?.Replace(Environment.CurrentDirectory, "");
+
+			System.Console.WriteLine($"Call Info: File='{relativeFilePath}' | Method='{caller}' | Line Number='{lineNumber}'");
 
 			Console.ForegroundColor = foregroundColor;
 			return instance;

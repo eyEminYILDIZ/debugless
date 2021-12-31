@@ -5,8 +5,11 @@ namespace Debugless.Core
 {
 	public static class DebuglessTracing
 	{
-		public static Debugl CallInfo(this Debugl instance, [CallerMemberName] string caller = "", [CallerFilePath] string file = "", [CallerLineNumber] int lineNumber = 0)
+		public static Debugl CallInfo(this Debugl instance, [CallerMemberName] string caller = "", [CallerFilePath] string file = "", [CallerLineNumber] int lineNumber = 0, bool condition = true)
 		{
+			if (!condition)
+				return instance;
+
 			var foregroundColor = Console.ForegroundColor;
 			Console.ForegroundColor = ConsoleColor.Magenta;
 

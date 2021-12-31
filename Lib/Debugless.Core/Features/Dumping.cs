@@ -5,8 +5,11 @@ namespace Debugless.Core
 {
 	public static class DebuglessDumping
 	{
-		public static Debugl DumpObject(this Debugl instance, object objectForDump)
+		public static Debugl DumpObject(this Debugl instance, object objectForDump, bool condition = true)
 		{
+			if (!condition)
+				return instance;
+
 			var foregroundColor = Console.ForegroundColor;
 			Console.ForegroundColor = ConsoleColor.Blue;
 

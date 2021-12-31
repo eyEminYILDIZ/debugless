@@ -10,7 +10,7 @@ namespace Debugless.Example
 		{
 			var student = new Student()
 			{
-				Id = 0,
+				Id = 1,
 				FirstName = "John",
 				LastName = "Doe",
 				BirthDate = DateTime.SpecifyKind(DateTime.Parse("1994.01.01 10:00:00"), DateTimeKind.Local),
@@ -23,6 +23,7 @@ namespace Debugless.Example
 			};
 
 			var debugless = new Debugl();
+			debugless.DumpObject(student, (student.Id == 2));
 			debugless.Information("Execution Started...");
 			debugless.DumpObject(student).CallInfo();
 			debugless.Information("Execution Finished").CallInfo();

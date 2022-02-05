@@ -27,6 +27,7 @@ namespace Debugless.Example
 			debugless.InfoLog("Execution Started...");
 			debugless.DumpObject(student).CallInfo();
 			debugless.InfoLog("Execution Finished").CallInfo();
+			debugless.WarningLog("A warning line...");
 		}
 	}
 }

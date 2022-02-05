@@ -24,9 +24,9 @@ namespace Debugless.Example
 
 			var debugless = new Debugl();
 			debugless.DumpObject(student, (student.Id == 2));
-			debugless.Information("Execution Started...");
+			debugless.InfoLog("Execution Started...");
 			debugless.DumpObject(student).CallInfo();
-			debugless.Information("Execution Finished").CallInfo();
+			debugless.InfoLog("Execution Finished").CallInfo();
 		}
 	}
 }

@@ -1,6 +1,6 @@
 # Debugless
 
-Debugless is a dotnet library that eliminates the need for debugging.
+Debugless is a dotnet library that helps debugging.
 
 ## Features
 

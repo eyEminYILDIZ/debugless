@@ -80,7 +80,7 @@ namespace Debugless.Core
 		{
 			var tabsAsString = "";
 			for (var i = 0; i < tabCount; i++)
-				tabsAsString += "\t";
+				tabsAsString += "  ";
 
 			return tabsAsString;
 		}
